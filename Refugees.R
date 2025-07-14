@@ -81,6 +81,7 @@ write.csv(ref_unrwa, "ref_unrwa.csv", row.names = F)
 # combine UNHCR and UNRWA
 ref_combined <- bind_rows(ref_unhcr, ref_unrwa) 
 
+# count refugees arriving to economies, calculate percentage out of world total
 ref_dest <- ref_combined %>%
   group_by(asylum_income_group) %>%
   summarise(dest_total = sum(total_refugees), .groups = "drop") %>%
