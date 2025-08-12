@@ -498,7 +498,7 @@ birth_upper <- birth %>%
   arrange(`OBS_VALUE:Observation Value`) %>% 
   mutate(count = row_number())
 
-# what is the avg. diff in birth compl. rate in low and LMIC economies? 
+# what is the avg. diff in birth compl. rate in LIC and LMIC economies? 
 birth_df %>% 
   select(`OBS_VALUE:Observation Value`, `Country Name`, `TIME_PERIOD:Time period`,
          Location, income_group) %>% 
@@ -510,3 +510,4 @@ birth_df %>%
   group_by(income_group) %>% 
   mutate(mean_value = mean((urban_rural_gap)), na.rm = T) %>% 
   select(mean_value) 
+
