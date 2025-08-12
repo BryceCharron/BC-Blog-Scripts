@@ -22,6 +22,7 @@ library(scales)
 library(ragg)
 library(ggbeeswarm)
 
+# set wd
 setwd("C:/Users/wb647336/OneDrive - WBG/Documents/Refugee Blog Post")
 
 # read in UNRWA dfs
@@ -117,3 +118,4 @@ ref_area_data <- read_csv("C:/Users/wb647336/OneDrive - WBG/Documents/Refugee Bl
 
 # write.csv
 write.csv(ref_area_data, "ref_area_df.csv", row.names = F)
+
