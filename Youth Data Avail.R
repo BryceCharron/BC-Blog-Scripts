@@ -35,7 +35,7 @@ sdg_2 <- read_excel("C:/Users/wb647336/Downloads/Tier Classification of SDG Indi
 # let's make this into an excel file that shows our filtering process
 write.csv(sdg_2, "sdg_2.csv", row.names = F)
 
-### now let's read in all of the indicators by series code
+### after excluding non-youth-relevant indicators, let's read in the remaining indicators by series code
 # initialize df "df"
 df <- NULL
 
@@ -257,4 +257,5 @@ df_geoArea_total <- df_clean_c %>%
   mutate(n_series = 49,
          pct_2020 = avail_2020/n_series * 100,
          pct_2015 = avail_2015/n_series * 100)
+
 
