@@ -96,12 +96,6 @@ df_clean <- df %>%
                                "15-29", "18-29", "<=45Y", "<35Y", 
                                "<30Y", "<45Y", "<=40Y","<25Y")) %>% 
   drop_na(iso3)
-
-df %>% 
-  filter(indicator == "16.7.2") %>% 
-  distinct(dimensions.Age)
-
-n_distinct(df_clean$indicator)
   
 # which indicators fit the "youth" relevant age groups? - 5.3.2 is filtered out
 # when removing regional aggregates
@@ -263,3 +257,4 @@ df_geoArea_total <- df_clean_c %>%
   mutate(n_series = 49,
          pct_2020 = avail_2020/n_series * 100,
          pct_2015 = avail_2015/n_series * 100)
+
